@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_09_185937) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_10_183019) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_09_185937) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "list", default: [], array: true
+    t.bigint "kitchen_id", null: false
+    t.index ["kitchen_id"], name: "index_recipes_on_kitchen_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -73,4 +75,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_09_185937) do
   add_foreign_key "kitchens", "users"
   add_foreign_key "pantries", "ingredients"
   add_foreign_key "pantries", "kitchens"
+  add_foreign_key "recipes", "kitchens"
 end

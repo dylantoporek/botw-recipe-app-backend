@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :recipe_lists
   resources :recipes
   resources :pantries
   resources :kitchens
