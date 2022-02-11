@@ -1,3 +1,3 @@
 class Recipe < ApplicationRecord
-    belongs_to :kitchen
+  belongs_to :kitchen
 end

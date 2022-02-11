@@ -2,14 +2,26 @@
 
 one:
   name: MyString
-  description: MyText
+  type: 
   price: 1
+  description: MyText
+  ing1: MyString
+  ing2: MyString
+  ing3: MyString
+  ing4: MyString
+  ing5: MyString
   image: MyString
-  priority: 1
+  kitchen: one
 
 two:
   name: MyString
-  description: MyText
+  type: 
   price: 1
+  description: MyText
+  ing1: MyString
+  ing2: MyString
+  ing3: MyString
+  ing4: MyString
+  ing5: MyString
   image: MyString
-  priority: 1
+  kitchen: two
