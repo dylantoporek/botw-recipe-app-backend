@@ -1,4 +1,4 @@
 class RecipeSerializer < ActiveModel::Serializer
-  attributes :id, :name, :type, :price, :description, :ing1, :ing2, :ing3, :ing4, :ing5, :image
+  attributes :id, :name, :category, :price, :description, :image, :ingredient1, :ingredient2, :ingredient3, :ingredient4, :ingredient5
   has_one :kitchen
 end

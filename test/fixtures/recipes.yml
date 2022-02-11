@@ -2,26 +2,26 @@
 
 one:
   name: MyString
-  type: 
+  category: MyString
   price: 1
   description: MyText
-  ing1: MyString
-  ing2: MyString
-  ing3: MyString
-  ing4: MyString
-  ing5: MyString
   image: MyString
+  ingredient1: MyString
+  ingredient2: MyString
+  ingredient3: MyString
+  ingredient4: MyString
+  ingredient5: MyString
   kitchen: one
 
 two:
   name: MyString
-  type: 
+  category: MyString
   price: 1
   description: MyText
-  ing1: MyString
-  ing2: MyString
-  ing3: MyString
-  ing4: MyString
-  ing5: MyString
   image: MyString
+  ingredient1: MyString
+  ingredient2: MyString
+  ingredient3: MyString
+  ingredient4: MyString
+  ingredient5: MyString
   kitchen: two
