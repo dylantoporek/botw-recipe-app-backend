@@ -32,3 +32,7 @@ group :development do
 end
 
 gem 'active_model_serializers', '~> 0.10.2'
+
+gem "httparty", "~> 0.20.0"
+
+gem "pry", "~> 0.14.1"
