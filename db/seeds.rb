@@ -1,9 +1,29 @@
 require 'pry'
 
+response = HTTParty.get('https://zelda-cookbook-backend.herokuapp.com/api/v1/recipes')
 
 response2 = HTTParty.get('https://zelda.fandom.com/wiki/Material')
 html2 = Nokogiri::HTML(response2)
 tables2 = html2.css('table')
+
+
+response3 = HTTParty.get('https://zelda.fandom.com/wiki/Food#List_of_Food')
+html = Nokogiri::HTML(response3)
+tables = html.css('table')
+
+recipes_info = tables[4].css('tr')
+all_recipes_info = recipes_info.map do |row|
+    cell_array = row.css('td')
+    if cell_array.empty? 
+        nil
+    else 
+        {
+            name: cell_array[0].inner_text,
+            image: cell_array[0].children.children[0].attributes['data-src'].value,
+            description: cell_array[1].inner_text
+        }
+    end
+end
 
 materials = tables2[2].css('tr')
 all_materials = materials.map do |row|
@@ -110,10 +130,25 @@ ingredients = filtered_materials.map do |mat|
     end
 end
 
+recipes = response.map do |item|
+    {
+        name: item['name'],
+        category: item['type'],
+        price: item['resale'],
+        ingredient1: item['ingredient1'],
+        ingredient2: item['ingredient2'],
+        ingredient3: item['ingredient3'],
+        ingredient4: item['ingredient4'],
+        ingredient5: item['ingredient5'],
+        description: "",
+        image: "",
+    }
+end
+
 
 binding.pry
 
-ingredients.each{|mat| Ingredient.create!(mat)}
+# ingredients.each{|mat| Ingredient.create!(mat)}
 
 
 
