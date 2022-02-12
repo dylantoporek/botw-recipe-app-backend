@@ -8,7 +8,6 @@ tables2 = html2.css('table')
 materials = tables2[2].css('tr')
 all_materials = materials.map do |row|
     cell_array = row.css('td')
-    binding.pry
     if cell_array.empty? 
         nil
     else
@@ -16,7 +15,8 @@ all_materials = materials.map do |row|
             name: cell_array[0].inner_text,
             description: cell_array[1].inner_text,
             price: cell_array[2].inner_text,
-            additional_info: cell_array[3].inner_text
+            additional_info: cell_array[3].inner_text,
+            image: cell_array[0].children.children[0].attributes['href'].value
 
         }
     end
@@ -30,16 +30,15 @@ ingredients = filtered_materials.map do |mat|
     {
         name: mat[:name],
         price: mat[:price],
-        description: mat[:description]
+        description: mat[:description],
+        image: mat[:image]
     }
 end
 
 
 binding.pry
 
-
-
-# ingredients.each{|mat| Ingredient.create!(mat)}
+ingredients.each{|mat| Ingredient.create!(mat)}
 
 
 
