@@ -27,12 +27,87 @@ filtered_materials = all_materials.filter do |ing_hash|
 end
 
 ingredients = filtered_materials.map do |mat|
-    {
-        name: mat[:name],
-        price: mat[:price],
-        description: mat[:description],
-        image: mat[:image]
-    }
+    if mat[:name].match?(/Apple|Lotus|Durian|Hydromelon|Banana|Fruit|Pepper|Voltfruit|Wildberry/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Fruit"
+        }
+    elsif mat[:name].match?(/Truffle|Chillshroom|Shroom|Ironshroom|Razorshroom|Rushroom|Sunshroom|Zapshroom/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Mushroom"
+        }
+    elsif mat[:name].match?(/Radish|Carrot|Pumpkin/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Vegetable"
+        }
+    elsif mat[:name].match?(/Meat/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Red Meat"
+        }
+    elsif mat[:name].match?(/Bird/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Poultry"
+        }
+    elsif mat[:name].match?(/Crab/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Crab"
+        }
+    elsif mat[:name].match?(/Carp|Porgy|Trout|Bass|Salmon/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Fish"
+        }
+    elsif mat[:name].match?(/Snail/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Snail"
+        }
+    elsif mat[:name].match?(/Acorn|Egg|Chickaloo|Honey|Butter|Rice|Spice|Wheat|Milk|Sugar/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Misc"
+        }
+    elsif mat[:name].match?(/Armoranth|Nightshade|Saffina|Herb|Thistle|Princess|Violet/)
+        {
+            name: mat[:name],
+            price: mat[:price],
+            description: mat[:description],
+            image: mat[:image],
+            category: "Herb"
+        }
+    end
 end
 
 
