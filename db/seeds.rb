@@ -12,6 +12,8 @@ html = Nokogiri::HTML(response3)
 tables = html.css('table')
 
 recipes_info = tables[4].css('tr')
+
+
 all_recipes_info = recipes_info.map do |row|
     cell_array = row.css('td')
     if cell_array.empty? 
@@ -23,9 +25,18 @@ all_recipes_info = recipes_info.map do |row|
             description: cell_array[1].inner_text
         }
     end
+end.compact.filter{|item| item.has_key?(:name)}
+
+description_list = all_recipes_info.map do |item|
+    {
+        name: item[:name],
+        image: item[:image],
+        description: item[:description]
+    }
 end
 
 materials = tables2[2].css('tr')
+
 all_materials = materials.map do |row|
     cell_array = row.css('td')
     if cell_array.empty? 
@@ -130,21 +141,28 @@ ingredients = filtered_materials.map do |mat|
     end
 end
 
-recipes = response.map do |item|
-    {
-        name: item['name'],
-        category: item['type'],
-        price: item['resale'],
-        ingredient1: item['ingredient1'],
-        ingredient2: item['ingredient2'],
-        ingredient3: item['ingredient3'],
-        ingredient4: item['ingredient4'],
-        ingredient5: item['ingredient5'],
-        description: "",
-        image: "",
-    }
-end
+recipes_list = response.map do |item|
+ 
+    specific_info = description_list.find do |info|
+        name_for_search = info[:name].chomp
+        item['name'].match?(name_for_search)
+    end
 
+    # binding.pry
+        {
+            name: item['name'],
+            category: item['type'],
+            price: item['resale'],
+            ingredient1: item['ingredient1'],
+            ingredient2: item['ingredient2'],
+            ingredient3: item['ingredient3'],
+            ingredient4: item['ingredient4'],
+            ingredient5: item['ingredient5'],
+            description: specific_info[:description],
+            image: specific_info[:image]
+        }
+
+end
 
 binding.pry
 
