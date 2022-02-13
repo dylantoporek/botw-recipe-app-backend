@@ -1,5 +1,5 @@
 class KitchensController < ApplicationController
-    
+    skip_before_action :authorize, only: :create
     def show
         kitchen = @current_user.kitchen
         render json: kitchen, status: :ok

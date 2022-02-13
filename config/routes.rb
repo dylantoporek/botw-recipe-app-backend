@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :kitchens, only: [:show, :create]
   resources :ingredients, only: [:index, :show]
   resources :stores, only: [:index, :show]
+  resources :users, only: [:update]
   post '/signup', to: 'users#create'
   get '/me', to: 'users#show'
   post '/login', to: 'sessions#create'

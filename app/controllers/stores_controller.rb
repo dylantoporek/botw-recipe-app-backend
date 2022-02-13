@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-    
+    skip_before_action :authorize
     def index
         render json: Store.all, status: :ok
     end
