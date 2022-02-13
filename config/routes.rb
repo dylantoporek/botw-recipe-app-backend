@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :infos, only:[:index]
   resources :recipes, only: [:index, :show]
   resources :pantries
-  resources :kitchens, only: [:show, :create, :update]
+  resources :kitchens, only: [:show, :create]
   resources :ingredients, only: [:index, :show]
   resources :stores, only: [:index, :show]
   post '/signup', to: 'users#create'
