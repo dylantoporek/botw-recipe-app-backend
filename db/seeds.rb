@@ -1,4 +1,5 @@
 require 'pry'
+puts "Seeding Data"
 
 response = HTTParty.get('https://zelda-cookbook-backend.herokuapp.com/api/v1/recipes')
 
@@ -60,82 +61,82 @@ end
 ingredients = filtered_materials.map do |mat|
     if mat[:name].match?(/Apple|Lotus|Durian|Hydromelon|Banana|Fruit|Pepper|Voltfruit|Wildberry/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Fruit"
         }
     elsif mat[:name].match?(/Truffle|Chillshroom|Shroom|Ironshroom|Razorshroom|Rushroom|Sunshroom|Zapshroom/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Mushroom"
         }
     elsif mat[:name].match?(/Radish|Carrot|Pumpkin/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Vegetable"
         }
     elsif mat[:name].match?(/Meat/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Red Meat"
         }
     elsif mat[:name].match?(/Bird/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Poultry"
         }
     elsif mat[:name].match?(/Crab/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Crab"
         }
     elsif mat[:name].match?(/Carp|Porgy|Trout|Bass|Salmon/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Fish"
         }
     elsif mat[:name].match?(/Snail/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Snail"
         }
     elsif mat[:name].match?(/Acorn|Egg|Chickaloo|Honey|Butter|Rice|Spice|Wheat|Milk|Sugar/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Misc"
         }
     elsif mat[:name].match?(/Armoranth|Nightshade|Saffina|Herb|Thistle|Princess|Violet/)
         {
-            name: mat[:name],
-            price: mat[:price],
-            description: mat[:description],
-            image: mat[:image],
+            name: mat[:name].chomp,
+            price: mat[:price].chomp.to_i,
+            description: mat[:description].chomp,
+            image: mat[:image].chomp,
             category: "Herb"
         }
     end
@@ -147,8 +148,7 @@ recipes_list = response.map do |item|
         name_for_search = info[:name].chomp
         item['name'].match?(name_for_search)
     end
-
-    # binding.pry
+    
         {
             name: item['name'],
             category: item['type'],
@@ -158,16 +158,17 @@ recipes_list = response.map do |item|
             ingredient3: item['ingredient3'],
             ingredient4: item['ingredient4'],
             ingredient5: item['ingredient5'],
-            description: specific_info[:description],
-            image: specific_info[:image]
+            description: specific_info
+            
         }
 
 end
 
+
 binding.pry
 
 # ingredients.each{|mat| Ingredient.create!(mat)}
+Ingredient.create!(ingredients)
 
-
-
+puts "Done Seeding"
 
