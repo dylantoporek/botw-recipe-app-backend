@@ -1,5 +1,6 @@
 class Recipe < ApplicationRecord
-  
+  has_many :dishes
+  has_many :kitchens, through: :dishes
   # validates :name, presence: true
   # validates :price, presence: true
   # validates :ingredient1, presence: true
