@@ -180,10 +180,10 @@ end
 # binding.pry
 
 # ingredients.each{|mat| Ingredient.create!(mat)}
-Store.create!(name: "Lurelin General Store", description: "For all your daily needs")
+Store.create!(name: "Lurelin General Store", description: "For all your daily needs.")
 Store.create!(name: "The Slippery Falcon", description: "The best butcher in all of Hyrule! Specialty meat and dairy products.")
-Store.create!(name: "Kara Kara Bazaar", description: "Exotic imports from the Gerudo Desert")
-Store.create!(name: "East Wind", description: "General Store")
+Store.create!(name: "Kara Kara Bazaar", description: "Exotic imports from the Gerudo Desert.")
+Store.create!(name: "East Wind", description: "Items from all over Hyrule.")
 Store.create!(name: "Olkin's Produce", description: "We carry a wide variety of produce.")
 Recipe.create!(recipes_list)
 Ingredient.create!(ingredients)
