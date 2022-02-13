@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_12_170619) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_13_185001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "infos", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
@@ -45,8 +53,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_12_170619) do
     t.string "name"
     t.string "category"
     t.integer "price"
-    t.text "description"
-    t.string "image"
     t.string "ingredient1"
     t.string "ingredient2"
     t.string "ingredient3"
@@ -54,6 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_12_170619) do
     t.string "ingredient5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "details", default: [], array: true
   end
 
   create_table "stores", force: :cascade do |t|

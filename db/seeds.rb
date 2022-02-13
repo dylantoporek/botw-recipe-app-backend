@@ -142,13 +142,16 @@ ingredients = filtered_materials.map do |mat|
     end
 end
 
-recipes_list = response.map do |item|
+    recipes_list = response.map do |item|
  
-    specific_info = description_list.find do |info|
-        name_for_search = info[:name].chomp
-        item['name'].match?(name_for_search)
-    end
-    
+        # specific_info = description_list.find do |info|
+        #     name_for_search = info[:name].chomp
+        #     item['name'].match?(name_for_search)
+        # end
+
+        # details_arr = [specific_info[:description], specific_info[:image]]
+        
+        # binding.pry
         {
             name: item['name'],
             category: item['type'],
@@ -158,17 +161,28 @@ recipes_list = response.map do |item|
             ingredient3: item['ingredient3'],
             ingredient4: item['ingredient4'],
             ingredient5: item['ingredient5'],
-            description: specific_info
+            details: []
             
         }
 
-end
+    end
+
+    info_list = description_list.map do |info|
+        # binding.pry
+       {
+           name: info[:name].chomp,
+           description: info[:description].chomp,
+           image: info[:image]
+       }
+    end
 
 
-binding.pry
+# binding.pry
 
 # ingredients.each{|mat| Ingredient.create!(mat)}
+Recipe.create!(recipes_list)
 Ingredient.create!(ingredients)
+Info.create!(info_list)
 
 puts "Done Seeding"
 
