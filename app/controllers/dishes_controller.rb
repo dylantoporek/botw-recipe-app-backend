@@ -24,7 +24,7 @@ class DishesController < ApplicationController
     def destroy
         dish = @current_user.kitchen.dishes.find_by(id: params[:id])
         dish.delete
-        head: :no_content
+        head :no_content
     end
 
     private

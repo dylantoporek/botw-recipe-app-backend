@@ -24,7 +24,7 @@ class PantriesController < ApplicationController
     def destroy
         pantry = @current_user.kitchen.pantries.find_by(id: params[:id])
         pantry.delete
-        head: :no_content
+        head :no_content
     end
 
     private

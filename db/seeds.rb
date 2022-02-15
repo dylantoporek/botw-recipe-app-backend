@@ -144,12 +144,12 @@ end
 
     recipes_list = response.map do |item|
  
-        # specific_info = description_list.find do |info|
-        #     name_for_search = info[:name].chomp
-        #     item['name'].match?(name_for_search)
-        # end
+        specific_info = description_list.find do |info|
+            name_for_search = info[:name].chomp
+            item['name'].match?(name_for_search)
+        end
 
-        # details_arr = [specific_info[:description], specific_info[:image]]
+        
         
         # binding.pry
         {
@@ -161,25 +161,19 @@ end
             ingredient3: item['ingredient3'],
             ingredient4: item['ingredient4'],
             ingredient5: item['ingredient5'],
-            details: []
+            description: specific_info ? specific_info[:description].chomp : nil,
+            image: specific_info ? specific_info[:image] : nil
             
         }
 
     end
 
-    info_list = description_list.map do |info|
-        # binding.pry
-       {
-           name: info[:name].chomp,
-           description: info[:description].chomp,
-           image: info[:image]
-       }
-    end
+    
 
 
 # binding.pry
 
-# ingredients.each{|mat| Ingredient.create!(mat)}
+
 Store.create!(name: "Lurelin General Store", description: "For all your daily needs.")
 Store.create!(name: "The Slippery Falcon", description: "The best butcher in all of Hyrule! Specialty meat and dairy products.")
 Store.create!(name: "Kara Kara Bazaar", description: "Exotic imports from the Gerudo Desert.")
@@ -187,7 +181,7 @@ Store.create!(name: "East Wind", description: "Items from all over Hyrule.")
 Store.create!(name: "Olkin's Produce", description: "We carry a wide variety of produce.")
 Recipe.create!(recipes_list)
 Ingredient.create!(ingredients)
-Info.create!(info_list)
+
 
 puts "Done Seeding"
 

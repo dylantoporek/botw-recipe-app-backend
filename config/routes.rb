@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :dishes
-  resources :infos, only:[:index]
   resources :recipes, only: [:index, :show]
   resources :pantries
   resources :kitchens, only: [:show, :create]

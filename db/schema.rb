@@ -24,14 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_13_190256) do
     t.index ["recipe_id"], name: "index_dishes_on_recipe_id"
   end
 
-  create_table "infos", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -70,7 +62,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_13_190256) do
     t.string "ingredient5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "details", default: [], array: true
+    t.string "image"
+    t.text "description"
   end
 
   create_table "stores", force: :cascade do |t|
