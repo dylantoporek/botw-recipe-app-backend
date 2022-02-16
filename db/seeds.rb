@@ -55,7 +55,7 @@ all_materials = materials.map do |row|
 end.compact.filter{|mat| mat.has_key?(:additional_info)}
 
 filtered_materials = all_materials.filter do |ing_hash|
-    ing_hash[:additional_info].match?(/cook|restore|hearts/) && !ing_hash[:additional_info].match?(/elixir/)
+    ing_hash[:additional_info].match?(/cook|Restores|hearts/) && !ing_hash[:additional_info].match?(/elixir/)
 end
 
 ingredients = filtered_materials.map do |mat|
@@ -162,13 +162,26 @@ end
             ingredient4: item['ingredient4'],
             ingredient5: item['ingredient5'],
             description: specific_info ? specific_info[:description].chomp : nil,
-            image: specific_info ? specific_info[:image] : nil
+            image: specific_info ? specific_info[:image].split("/revision")[0] : nil
             
         }
 
     end
 
     
+
+master_ingredients_list = ingredients.map do |ing|
+    
+
+    {
+        name: ing ? ing[:name] : nil,
+        description: ing ? ing[:description] : nil,
+        image: ing ? ing[:image].split("/revision")[0] : nil,
+        category: ing ? ing[:category] : nil,
+        price: ing ? ing[:price] : nil
+    }
+end
+
 
 
 # binding.pry
@@ -180,7 +193,7 @@ Store.create!(name: "Kara Kara Bazaar", description: "Exotic imports from the Ge
 Store.create!(name: "East Wind", description: "Items from all over Hyrule.")
 Store.create!(name: "Olkin's Produce", description: "We carry a wide variety of produce.")
 Recipe.create!(recipes_list)
-Ingredient.create!(ingredients)
+Ingredient.create!(master_ingredients_list)
 
 
 puts "Done Seeding"
