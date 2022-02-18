@@ -1,4 +1,5 @@
 class PantriesController < ApplicationController
+
     def index
         render json: @current_user.kitchen.pantries, status: :ok
     end
@@ -30,6 +31,6 @@ class PantriesController < ApplicationController
     private
 
     def pantry_params
-        params.permit(:kitchen_id, :ingredient_id, :quantity)
+        params.permit(:ingredient_id, :quantity)
     end
 end
