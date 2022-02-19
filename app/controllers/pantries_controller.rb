@@ -1,7 +1,8 @@
 class PantriesController < ApplicationController
-
+    
+    
     def index
-        render json: @current_user.kitchen.pantries, status: :ok
+        render json: @current_user.kitchen.pantries.all, status: :ok
     end
 
     def show

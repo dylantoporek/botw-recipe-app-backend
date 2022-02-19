@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
     def index
-        render json: @current_user.kitchen.dishes, status: :ok
+        render json: @current_user.kitchen.dishes.all, status: :ok
     end
 
     def show
@@ -30,6 +30,6 @@ class DishesController < ApplicationController
     private
 
     def dish_params
-        params.permit(:quantity, :recipe_id, :kitchen_id)
+        params.permit(:quantity, :recipe_id)
     end
 end

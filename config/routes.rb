@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :dishes
   resources :recipes, only: [:index, :show]
   resources :pantries
-  resources :kitchens, only: [:show, :create]
+  resources :kitchens, only: [:index, :create]
   resources :ingredients, only: [:index, :show]
   resources :stores, only: [:index, :show]
   resources :users, only: [:update]
