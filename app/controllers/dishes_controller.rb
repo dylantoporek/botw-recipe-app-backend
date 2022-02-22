@@ -30,6 +30,6 @@ class DishesController < ApplicationController
     private
 
     def dish_params
-        params.permit(:quantity, :recipe_id)
+        params.require(:dish).permit(:quantity, :recipe_id)
     end
 end
