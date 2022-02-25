@@ -123,7 +123,7 @@ ingredients = filtered_materials.map do |mat|
             image: mat[:image].chomp,
             category: "Snail"
         }
-    elsif mat[:name].match?(/Acorn|Egg|Chickaloo|Honey|Butter|Rice|Spice|Wheat|Milk|Sugar/)
+    elsif mat[:name].match?(/Acorn|Egg|Chickaloo|Honey|Butter|Rice|Spice|Wheat|Milk|Sugar|Rock|Salt/)
         {
             name: mat[:name].chomp,
             price: mat[:price].chomp.to_i,
