@@ -1,4 +1,4 @@
-class KitchensController < ApplicationController
+class Api::V1::KitchensController < ApplicationController
     skip_before_action :authorize, only: :create
     def index
         kitchen = @current_user.kitchen

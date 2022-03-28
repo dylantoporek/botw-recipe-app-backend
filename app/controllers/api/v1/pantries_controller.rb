@@ -1,4 +1,4 @@
-class PantriesController < ApplicationController
+class Api::V1::PantriesController < ApplicationController
     
     def index
         render json: @current_user.kitchen.pantries.all, status: :ok

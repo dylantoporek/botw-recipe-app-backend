@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController
+class Api::V1::RecipesController < ApplicationController
     skip_before_action :authorize
     def index
         render json: Recipe.all, status: :ok
