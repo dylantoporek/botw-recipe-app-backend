@@ -40,22 +40,27 @@ materials = tables2[2].css('tr')
 
 all_materials = materials.map do |row|
     cell_array = row.css('td')
+    # binding.pry
     if cell_array.empty? 
         nil
     else
         {
-            name: cell_array[0].inner_text,
-            description: cell_array[1].inner_text,
-            price: cell_array[2].inner_text,
-            additional_info: cell_array[3].inner_text,
-            image: cell_array[0].children.children[0].attributes['href'].value
+            name: cell_array[0] ? cell_array[0].inner_text : nil,
+            description: cell_array[1] ? cell_array[1].inner_text : nil,
+            price: cell_array[2] ? cell_array[2].inner_text : nil,
+            additional_info: cell_array[3] ? cell_array[3].inner_text : nil,
+            image: cell_array[0].children.children[0].attributes['href'] ? cell_array[0].children.children[0].attributes['href'].value : nil
 
         }
     end
 end.compact.filter{|mat| mat.has_key?(:additional_info)}
 
 filtered_materials = all_materials.filter do |ing_hash|
+   if ing_hash[:additional_info]
     ing_hash[:additional_info].match?(/cook|Restores|hearts/) && !ing_hash[:additional_info].match?(/elixir/)
+   else
+    nil
+   end
 end
 
 ingredients = filtered_materials.map do |mat|
