@@ -12,18 +12,19 @@ response3 = HTTParty.get('https://zelda.fandom.com/wiki/Food#List_of_Food')
 html = Nokogiri::HTML(response3)
 tables = html.css('table')
 
-recipes_info = tables[4].css('tr')
+recipes_info = tables[3].css('tr')
 
 
 all_recipes_info = recipes_info.map do |row|
     cell_array = row.css('td')
+    # binding.pry
     if cell_array.empty? 
         nil
     else 
         {
-            name: cell_array[0].inner_text,
-            image: cell_array[0].children.children[0].attributes['data-src'].value,
-            description: cell_array[1].inner_text
+            name: cell_array[0] ? cell_array[0].inner_text : nil,
+            image: cell_array[0].children.children[0].attributes['data-src'] ? cell_array[0].children.children[0].attributes['data-src'].value : nil,
+            description: cell_array[1] ? cell_array[1].inner_text : nil
         }
     end
 end.compact.filter{|item| item.has_key?(:name)}
@@ -36,7 +37,7 @@ description_list = all_recipes_info.map do |item|
     }
 end
 
-materials = tables2[2].css('tr')
+materials = tables2[1].css('tr')
 
 all_materials = materials.map do |row|
     cell_array = row.css('td')
