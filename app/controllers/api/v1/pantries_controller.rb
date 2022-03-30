@@ -1,7 +1,7 @@
 class Api::V1::PantriesController < ApplicationController
     
     def index
-        render json: @current_user.kitchen.pantries.all, status: :ok
+        render json: @current_user.kitchen.pantries, status: :ok
     end
 
     def show

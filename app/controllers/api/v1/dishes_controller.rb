@@ -1,6 +1,6 @@
 class Api::V1::DishesController < ApplicationController
     def index
-        render json: @current_user.kitchen.dishes.all, status: :ok
+        render json: @current_user.kitchen.dishes, status: :ok
     end
 
     def show
