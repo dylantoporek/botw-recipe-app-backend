@@ -1,24 +1,14 @@
-# README
+# Breath of the Wild Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
+The database to store all information related to Breath of the Wild Cooking App.
 
-Things you may want to cover:
+User sign in / sign up finctionality with password protection through b-crypt.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Full list of:
+<li>
+Cookbook Recipes
+</li>
+<li>
+Ingredients
+</li>
