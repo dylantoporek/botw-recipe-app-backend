@@ -55,6 +55,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_13_190256) do
     t.string "name"
     t.string "category"
     t.integer "price"
+    t.text "description"
+    t.string "image"
     t.string "ingredient1"
     t.string "ingredient2"
     t.string "ingredient3"
@@ -62,8 +64,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_13_190256) do
     t.string "ingredient5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
-    t.text "description"
   end
 
   create_table "stores", force: :cascade do |t|

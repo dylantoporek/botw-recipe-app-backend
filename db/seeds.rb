@@ -1,9 +1,11 @@
 require 'pry'
 puts "Seeding Data"
 
-response = HTTParty.get('https://zelda-cookbook-backend.herokuapp.com/api/v1/recipes')
+response = HTTParty.get('https://zelda.fandom.com/wiki/Food#Breath_of_the_Wild')
+meals = Nokogiri::HTML(response)
+tables3 = meals.css('table')
 
-response2 = HTTParty.get('https://zelda.fandom.com/wiki/Material')
+response2 = HTTParty.get('https://zelda.fandom.com/wiki/Material/Breath_of_the_Wild')
 html2 = Nokogiri::HTML(response2)
 tables2 = html2.css('table')
 
@@ -37,11 +39,10 @@ description_list = all_recipes_info.map do |item|
     }
 end
 
-materials = tables2[1].css('tr')
+materials = tables2[0].css('tr')
 
 all_materials = materials.map do |row|
     cell_array = row.css('td')
-    # binding.pry
     if cell_array.empty? 
         nil
     else
@@ -148,31 +149,70 @@ ingredients = filtered_materials.map do |mat|
     end
 end
 
-    recipes_list = response.map do |item|
+
+    # recipes_list = tables3[2].css('tr').map do |item|
+    #     print item
+    #     binding.pry
  
-        specific_info = description_list.find do |info|
-            name_for_search = info[:name].chomp
-            item['name'].match?(name_for_search)
-        end
+    #     # specific_info = description_list.find do |info|
+    #     #     name_for_search = info[:name].chomp
+    #     #     item['name'].match?(name_for_search)
+    #     # end
 
         
         
-        # binding.pry
-        {
-            name: item['name'],
-            category: item['type'],
-            price: item['resale'],
-            ingredient1: item['ingredient1'],
-            ingredient2: item['ingredient2'],
-            ingredient3: item['ingredient3'],
-            ingredient4: item['ingredient4'],
-            ingredient5: item['ingredient5'],
-            description: specific_info ? specific_info[:description].chomp : nil,
-            image: specific_info ? specific_info[:image].split("/revision")[0] : nil
+    #     # binding.pry
+    #     {
+    #         name: item.inner_text.chomp,
+    #         # category: item['type'],
+    #         # price: item['resale'],
+    #         # ingredient1: item['ingredient1'],
+    #         # ingredient2: item['ingredient2'],
+    #         # ingredient3: item['ingredient3'],
+    #         # ingredient4: item['ingredient4'],
+    #         # ingredient5: item['ingredient5'],
+    #         # description: specific_info ? specific_info[:description].chomp : nil,
+    #         image: item.children[0].children[0].attributes['data-src'].value.split("/revision")[0]
             
-        }
+    #     }
 
-    end
+    # end
+
+    recipes_list = [
+        {
+            name: 'Apple Pie',
+            category: '',
+            price: 50,
+            ingredient1: 'Apple',
+            ingredient2: 'Tabantha Wheat',
+            ingredient3: 'Cane Sugar',
+            ingredient4: 'Goat Butter',
+            description: 'The crispy, flaky pie crust and sweet apples are a match made in heaven',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/e7/BotW_Apple_Pie_Icon.png'
+        },
+        {
+            name: 'Crab Omelet with Rice',
+            category: '',
+            price: 75,
+            ingredient1: 'Any Crab',
+            ingredient2: 'Hylian Rice',
+            ingredient3: 'Bird Egg',
+            ingredient4: 'Rock Salt',
+            description: 'The fluffy crab legs pair perfectly with the rice for a truly scrumptious dish.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6d/BotW_Crab_Omelet_with_Rice_Icon.png'
+        },
+        {
+            name: 'Crab Omelet with Rice',
+            category: '',
+            price: 75,
+            ingredient1: 'Raw Bird Thigh',
+            ingredient2: 'Hylian Rice',
+            ingredient3: 'Goron Spice',
+            description: "The secret to this curry's flavor is taking it off the heat while you add the spices.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c0/BotW_Poultry_Curry_Icon.png'
+        },
+        
+    ]
 
     
 
