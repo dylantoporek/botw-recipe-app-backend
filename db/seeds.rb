@@ -181,8 +181,8 @@ end
     recipes_list = [
         {
             name: 'Apple Pie',
-            category: '',
-            price: 50,
+            category: 'Dessert',
+            price: 40,
             ingredient1: 'Apple',
             ingredient2: 'Tabantha Wheat',
             ingredient3: 'Cane Sugar',
@@ -191,27 +191,325 @@ end
             image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/e7/BotW_Apple_Pie_Icon.png'
         },
         {
-            name: 'Crab Omelet with Rice',
-            category: '',
-            price: 75,
-            ingredient1: 'Any Crab',
-            ingredient2: 'Hylian Rice',
-            ingredient3: 'Bird Egg',
-            ingredient4: 'Rock Salt',
-            description: 'The fluffy crab legs pair perfectly with the rice for a truly scrumptious dish.',
-            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6d/BotW_Crab_Omelet_with_Rice_Icon.png'
+            name: 'Carrot Cake',
+            category: 'Dessert',
+            price: 40,
+            ingredient1: 'Endura Carrot',
+            ingredient2: 'Tabantha Wheat',
+            ingredient3: 'Cane Sugar',
+            ingredient4: 'Goat Butter',
+            description: "Even those who don't like carrots tend to enjoy the mild sweetness of this cake.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/8/81/BotW_Carrot_Cake_Icon.png'
+        },
+        {
+            name: 'Carrot Stew',
+            category: 'Vegetarian Soup',
+            price: 40,
+            ingredient1: 'Swift Carrot',
+            ingredient2: 'Tabantha Wheat',
+            ingredient3: 'Fresh Milk',
+            ingredient4: 'Goat Butter',
+            description: "This simple stew sat simmering for a long time to bring out the sweetness of the carrots.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/e5/BotW_Carrot_Stew_Icon.png'
+        },
+        {
+            name: 'Clam Chowder',
+            category: 'Seafood Soup',
+            price: 60,
+            ingredient1: 'Hearty Blueshell Snail',
+            ingredient2: 'Goat Butter',
+            ingredient3: 'Tabantha Wheat',
+            ingredient4: 'Fresh Milk',
+            description: 'The nutritional value of hearty blueshell snail combines with butter and milk in a rich soup.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/3b/BotW_Clam_Chowder_Icon.png'
         },
         {
             name: 'Crab Omelet with Rice',
-            category: '',
-            price: 75,
-            ingredient1: 'Raw Bird Thigh',
+            category: 'Seafood Breakfast',
+            price: 50,
+            ingredient1: 'Bird Egg',
+            ingredient2: 'Hylian Rice',
+            ingredient3: 'Rock Salt',
+            ingredient4: 'Ironshell Crab',
+            description: "The fluffy crab legs pair perfectly with the rice for a truly scrumptious dish.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6d/BotW_Crab_Omelet_with_Rice_Icon.png'
+        },
+        {
+            name: 'Crab Risotto',
+            category: 'Seafood Meal',
+            price: 60,
+            ingredient1: 'Goat Butter',
+            ingredient2: 'Hylian Rice',
+            ingredient3: 'Rock Salt',
+            ingredient4: 'Razorclaw Crab',
+            description: "An everyday staple of seaside villages, the secret to its delicious flavor lies in crab fat.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/f/f3/BotW_Crab_Risotto_Icon.png'
+        },
+        {
+            name: 'Crab Stir Fry',
+            category: 'Seafood Meal',
+            price: 40,
+            ingredient1: 'Bright-Eyed Crab',
+            ingredient2: 'Goron Spice',
+            description: "The Goron spice used in preparing this crab pairs perfectly with the flavor of the meat.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/be/BotW_Crab_Stir-Fry_Icon.png'
+        },
+        {
+            name: 'Cream of Mushroom Soup',
+            category: 'Vegetarian Soup',
+            price: 80,
+            ingredient1: 'Ironshroom',
+            ingredient2: 'Big Hearty Radish',
+            ingredient3: 'Fresh Milk',
+            ingredient4: 'Rock Salt',
+            description: "The creamy mushroom and vegetable soup is so chunky it eats like a meal!",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/0c/BotW_Cream_of_Mushroom_Soup_Icon.png'
+        },
+        {
+            name: 'Creamy Heart Soup',
+            category: 'Vegetarian Soup',
+            price: 50,
+            ingredient1: 'Hydromelon',
+            ingredient2: 'Fresh Milk',
+            ingredient3: 'Hearty Radish',
+            ingredient4: 'Voltfruit',
+            description: "Enjoying this sweet soup with another person will bring you both closer together.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/21/BotW_Creamy_Heart_Soup_Icon.png'
+        },
+        {
+            name: 'Curry Pilaf',
+            category: 'Curry Meal',
+            price: 45,
+            ingredient1: 'Hylian Rice',
+            ingredient2: 'Bird Egg',
+            ingredient3: 'Goat Butter',
+            ingredient4: 'Goron Spice',
+            description: "The Goron spice used in this pilaf has given it a rich, spicy aroma.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c3/BotW_Curry_Pilaf_Icon.png'
+        },
+        {
+            name: 'Curry Rice',
+            category: 'Curry Meal',
+            price: 15,
+            ingredient1: 'Hylian Rice',
+            ingredient2: 'Goron Spice',
+            description: "A favorite all over Hyrule, this simple dish has a flavor you just won't get tired of.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/d/d0/BotW_Curry_Rice_Icon.png'
+        },
+        {
+            name: 'Egg Pudding',
+            category: 'Dessert',
+            price: 25,
+            ingredient1: 'Fresh Milk',
+            ingredient2: 'Bird Egg',
+            ingredient3: 'Cane Sugar',
+            description: "Made by cooking eggs and milk in a special mold, its soft texture melts in your mouth.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/22/BotW_Egg_Pudding_Icon.png'
+        },
+        {
+            name: 'Egg Tart',
+            category: 'Dessert',
+            price: 25,
+            ingredient1: 'Goat Butter',
+            ingredient2: 'Bird Egg',
+            ingredient3: 'Cane Sugar',
+            ingredient4: 'Tabantha Wheat',
+            description: "You'll know this simple dessert is done baking when it smells just delightful.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/1/1c/BotW_Egg_Tart_Icon.png'
+        },
+        {
+            name: 'Energizing Honey Candy',
+            category: 'Dessert',
+            price: 10,
+            ingredient1: 'Courser Bee Honey',
+            description: "A natural sweet, brimming with nutrition and made by stewing fresh honey.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/20/BotW_Honey_Candy_Icon.png'
+        },
+        {
+            name: 'Fish Pie',
+            category: 'Seafood Pie',
+            price: 55,
+            ingredient1: 'Hyrule Bass',
+            ingredient2: 'Goat Butter',
+            ingredient3: 'Rock Salt',
+            ingredient4: 'Tabantha Wheat',
+            description: "A mainstay in any fisherman's home, the crisp crust pairs well with the fishy flavor.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/ed/BotW_Fish_Pie_Icon.png'
+        },
+        {
+            name: 'Fragrant Mushroom Sauté',
+            category: 'Vegetarian Meal',
+            price: 30,
+            ingredient1: 'Endura Shroom',
+            ingredient2: 'Goron Spice',
+            description: "The fragrant aroma of this sautéed spice and mushroom dish makes your mouth water.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c7/BotW_Fragrant_Mushroom_Saut%C3%A9_Icon.png'
+        },
+        {
+            name: 'Fish Skewer',
+            category: 'Seafood Meal',
+            price: 15,
+            ingredient1: 'Hearty Bass',
+            description: 'A simple dish made by cooking chunks of fresh fish on a skewer.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/59/BotW_Fish_Skewer_Icon.png'
+        },
+        {
+            name: 'Fish and Mushroom Skewer',
+            category: 'Seafood Meal',
+            price: 25,
+            ingredient1: 'Sanke Carp',
+            ingredient2: 'Rushroom',
+            description: 'A simple dish made by cooking skewered, fresh fish alongside fragrant mushrooms.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/2d/BotW_Fish_and_Mushroom_Skewer_Icon.png'
+        },
+        {
+            name: 'Fried Bananas',
+            category: 'Vegetarian Dessert',
+            price: 30,
+            ingredient1: 'Mighty Bananas',
+            ingredient2: 'Tabantha Wheat',
+            ingredient3: 'Cane Sugar',
+            description: 'Children love fried mighty bananas. The trick is frying them over very high heat.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/f/fb/BotW_Fried_Bananas_Icon.png'
+        },
+        {
+            name: 'Fried Egg and Rice',
+            category: 'Meal',
+            price: 20,
+            ingredient1: 'Bird Egg',
+            ingredient2: 'Hylian Rice',
+            description: 'The soft egg yolk pairs well with the fresh rice in this simple dish.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/0a/BotW_Fried_Egg_and_Rice_Icon.png'
+        },
+        {
+            name: 'Fruit and Mushroom Mix',
+            category: 'Vegetarian Fruit Meal',
+            price: 15,
+            ingredient1: 'Hearty Durian',
+            ingredient2: 'Sunshroom',
+            description: 'This dish contrasts the sweetness of fruit with the savoriness of mushrooms.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/7b/BotW_Fruit_and_Mushroom_Mix_Icon.png'
+        },
+        {
+            name: 'Glazed Meat',
+            category: 'Meat Meal',
+            price: 20,
+            ingredient1: 'Courser Bee Honey',
+            ingredient2: 'Raw Meat',
+            description: 'The sweetness of the honey permeates the meat, giving it a complex taste profile.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b3/BotW_Glazed_Meat_Icon.png'
+        },
+        {
+            name: 'Gourmet Poultry Pilaf',
+            category: 'Meat Meal',
+            price: 60,
+            ingredient1: 'Raw Whole Bird',
+            ingredient2: 'Hylian Rice',
+            ingredient3: 'Goat Butter',
+            ingredient4: 'Bird Egg',
+            description: 'Made with the highest-quality poultry, every bite of this pilaf floods your mouth with flavor.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/0d/BotW_Gourmet_Poultry_Pilaf_Icon.png'
+
+        },
+        {
+            name: 'Meat-Stuffed Pumpkin',
+            category: 'Meat Pie',
+            price: 40,
+            ingredient1: 'Fortified Pumpkin',
+            ingredient2: 'Raw Prime Meat',
+            description: 'This hollow, meat-filled fortified pumpkin is a local specialty or Kakariko Village.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/3f/BotW_Meat-Stuffed_Pumpkin_Icon.png'
+        },
+        {
+            name: 'Herb Sauté',
+            category: 'Vegetarian Meal',
+            price: 15,
+            ingredient1: 'Hyrule Herb',
+            ingredient2: 'Goron Spice',
+            description: "A fragrant mixture of herbs and spices. It's easily recognized by its unique aroma.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/d/d3/BotW_Herb_Saut%C3%A9_Icon.png'
+        },
+        {
+            name: 'Monster Rice Balls',
+            category: 'Meal',
+            price: 100,
+            ingredient1: 'Monster Extract',
+            ingredient2: 'Hylian Rice',
+            ingredient3: 'Rock Salt',
+            description: 'Rice balls flavored with monster extract. Their unique aroma is not for everyone.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/3e/BotW_Monster_Rice_Balls_Icon.png'
+        },
+        {
+            name: 'Mushroom Rice Balls',
+            category: 'Vegetarian Meal',
+            price: 50,
+            ingredient1: 'Hylian Rice',
+            ingredient2: 'Silent Shroom',
+            ingredient3: 'Silent Princess',
+            description: 'The aroma of the mushrooms tickles your nose as you peel back the leafy wrapping.',
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/23/BotW_Mushroom_Rice_Balls_Icon.png'
+        },
+        {
+            name: 'Nutcake',
+            category: 'Dessert',
+            price: 40,
+            ingredient1: 'Chickaloo Tree Nut',
+            ingredient2: 'Tabantha Wheat',
+            ingredient3: 'Cane Sugar',
+            ingredient4: 'Goat Butter',
+            description: "Forest nuts give this cake a pleasant texture and a simple, understated sweetness.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/d/dd/BotW_Nutcake_Icon.png'
+        },
+        {
+            name: 'Pepper Seafood',
+            category: 'Seafood Meal',
+            price: 20,
+            ingredient1: 'Sizzlefin Trout',
+            ingredient2: 'Spicy Pepper',
+            description: "The pepper seeds grilled with this seafood draw out its taste and pleasant aroma.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/a/ae/BotW_Pepper_Seafood_Icon.png'
+        },
+        {
+            name: 'Pepper Steak',
+            category: 'Meat Meal',
+            price: 20,
+            ingredient1: 'Raw Prime Meat',
+            ingredient2: 'Spicy Pepper',
+            description: "A dish made by cooking meat in crushed peppers, suppressing the gamy taste while accentuating its flavor.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b2/BotW_Pepper_Steak_Icon.png'
+        },
+        {
+            name: 'Poultry Curry',
+            category: 'Meat Curry Meal',
+            price: 30,
+            ingredient1: 'Raw Bird Drumstick',
             ingredient2: 'Hylian Rice',
             ingredient3: 'Goron Spice',
-            description: "The secret to this curry's flavor is taking it off the heat while you add the spices.",
+            description: "The savory meat pairs well with the aroma of spice in this common curry.",
             image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c0/BotW_Poultry_Curry_Icon.png'
         },
-        
+        {
+            name: 'Salmon Meunière',
+            category: 'Seafood Meal',
+            price: 75,
+            ingredient1: 'Hearty Salmon',
+            ingredient2: 'Goat Butter',
+            ingredient3: 'Tabantha Wheat',
+            description: "The crispy skin of this fried hearty salmon puts its texture in a class all its own.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b4/BotW_Salmon_Meuni%C3%A8re_Icon.png'
+        },
+        {
+            name: 'Wildberry Crepe',
+            category: 'Dessert',
+            price: 40,
+            ingredient1: 'Wildberry',
+            ingredient2: 'Fresh Milk',
+            ingredient3: 'Tabantha Wheat',
+            ingredient4: 'Cane Sugar',
+            ingredient5: 'Bird Egg',
+            description: "Sweet, tart wildberries are folded into thin, springy dough to make this dessert.",
+            image: 'https://static.wikia.nocookie.net/zelda_gamepedia_en/images/4/42/BotW_Wildberry_Crepe_Icon.png'
+        }
     ]
 
     
