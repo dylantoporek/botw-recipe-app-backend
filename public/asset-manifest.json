@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f2a1ce67.css",
-    "main.js": "/static/js/main.e8ace955.js",
+    "main.css": "/static/css/main.55e09468.css",
+    "main.js": "/static/js/main.8ed8aedc.js",
     "static/js/787.14a6d0be.chunk.js": "/static/js/787.14a6d0be.chunk.js",
     "static/media/parchV.png": "/static/media/parchV.faf2895388ce92947dfc.png",
     "static/media/parchH.png": "/static/media/parchH.b7b3e85916c3a4d1ad3d.png",
@@ -15,16 +15,16 @@
     "static/media/darkPantry.png": "/static/media/darkPantry.116b3e0e1ba806554589.png",
     "static/media/cookbookIcon.png": "/static/media/cookbookIcon.6cbe28e070fa1306e0d0.png",
     "static/media/rupee.png": "/static/media/rupee.fb33064c6164bf70343e.png",
-    "static/media/homeIcon.png": "/static/media/homeIcon.d42f84ebc35c74a87a73.png",
+    "static/media/kitchenIcon.png": "/static/media/kitchenIcon.d42f84ebc35c74a87a73.png",
     "static/media/noImg.png": "/static/media/noImg.3c8a503ee6a67e461a08.png",
     "static/media/cartIcon.png": "/static/media/cartIcon.5442b0ed9f910fc27853.png",
     "index.html": "/index.html",
-    "main.f2a1ce67.css.map": "/static/css/main.f2a1ce67.css.map",
-    "main.e8ace955.js.map": "/static/js/main.e8ace955.js.map",
+    "main.55e09468.css.map": "/static/css/main.55e09468.css.map",
+    "main.8ed8aedc.js.map": "/static/js/main.8ed8aedc.js.map",
     "787.14a6d0be.chunk.js.map": "/static/js/787.14a6d0be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2a1ce67.css",
-    "static/js/main.e8ace955.js"
+    "static/css/main.55e09468.css",
+    "static/js/main.8ed8aedc.js"
   ]
 }
