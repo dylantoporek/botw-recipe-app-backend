@@ -178,11 +178,10 @@ async function updateUser(req, res) {
 api.patch("/users/:id", auth, wrap(updateUser));
 api.put("/users/:id", auth, wrap(updateUser));
 
-// ---------- reference data ----------
+// ---------- reference data (public: the frontend loads these before login) ----------
 
 api.get(
   "/recipes",
-  auth,
   wrap(async (req, res) => {
     const { rows } = await pool.query("SELECT * FROM recipes ORDER BY id");
     res.json(rows.map(serializeRecipe));
@@ -191,7 +190,6 @@ api.get(
 
 api.get(
   "/recipes/:id",
-  auth,
   wrap(async (req, res) => {
     const { rows } = await pool.query("SELECT * FROM recipes WHERE id = $1", [req.params.id]);
     if (!rows[0]) return res.status(404).json({ errors: ["Recipe not found"] });
@@ -201,7 +199,6 @@ api.get(
 
 api.get(
   "/ingredients",
-  auth,
   wrap(async (req, res) => {
     const { rows } = await pool.query("SELECT * FROM ingredients ORDER BY id");
     res.json(rows.map(serializeIngredient));
@@ -210,7 +207,6 @@ api.get(
 
 api.get(
   "/ingredients/:id",
-  auth,
   wrap(async (req, res) => {
     const { rows } = await pool.query("SELECT * FROM ingredients WHERE id = $1", [req.params.id]);
     if (!rows[0]) return res.status(404).json({ errors: ["Ingredient not found"] });
@@ -220,7 +216,6 @@ api.get(
 
 api.get(
   "/stores",
-  auth,
   wrap(async (req, res) => {
     const { rows } = await pool.query("SELECT * FROM stores ORDER BY id");
     res.json(rows.map(serializeStore));
@@ -229,7 +224,6 @@ api.get(
 
 api.get(
   "/stores/:id",
-  auth,
   wrap(async (req, res) => {
     const { rows } = await pool.query("SELECT * FROM stores WHERE id = $1", [req.params.id]);
     if (!rows[0]) return res.status(404).json({ errors: ["Store not found"] });
