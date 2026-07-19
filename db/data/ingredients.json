@@ -4,496 +4,496 @@
     "description": "A common fruit found on trees all around Hyrule. Eat it fresh, or cook it to increase its effect.",
     "price": 3,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Apple_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/f/f2/BotW_Apple_Icon.png"
   },
   {
     "name": "Palm Fruit",
     "description": "The fruit of a tropical tree that grows near the ocean. It restores hearts when eaten, and its sweetness intensifies when cooked.",
     "price": 4,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Palm_Fruit_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/9/93/BotW_Palm_Fruit_Icon.png"
   },
   {
     "name": "Wildberry",
     "description": "A fruit that grows in colder climates, this berry is a popular ingredient in desserts.",
     "price": 3,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Wildberry_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/1/10/BotW_Wildberry_Icon.png"
   },
   {
     "name": "Hearty Durian",
     "description": "This fruit's odor is a bit much for some, but it has a large number of devoted fans. Cook it to unlock its life-giving potential.",
     "price": 15,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hearty_Durian_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/8/83/BotW_Hearty_Durian_Icon.png"
   },
   {
     "name": "Hydromelon",
     "description": "A refreshing fruit grown mainly in the Gerudo region. Cooking it into a dish will provide a heat-resistance effect.",
     "price": 5,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hydromelon_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b0/BotW_Hydromelon_Icon.png"
   },
   {
     "name": "Spicy Pepper",
     "description": "The fruit of a plant that thrives in cold climates. Cook with it to receive a cold-resistance effect.",
     "price": 3,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Spicy_Pepper_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/0c/BotW_Spicy_Pepper_Icon.png"
   },
   {
     "name": "Voltfruit",
     "description": "A cactus fruit that grows in the Gerudo Desert. Cooking it into a dish grants a shock-resistance effect.",
     "price": 5,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Voltfruit_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/e1/BotW_Voltfruit_Icon.png"
   },
   {
     "name": "Fleet-Lotus Seeds",
     "description": "The seeds of a plant that grows near water. Cooking them into a dish will increase your movement speed.",
     "price": 5,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Fleet-Lotus_Seeds_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/5e/BotW_Fleet-Lotus_Seeds_Icon.png"
   },
   {
     "name": "Mighty Bananas",
     "description": "A fruit that grows in tropical climates. Cooking them into a dish will raise your attack power.",
     "price": 5,
     "category": "Fruit",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Mighty_Bananas_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/57/BotW_Mighty_Bananas_Icon.png"
   },
   {
     "name": "Hylian Shroom",
     "description": "A common mushroom found near trees around Hyrule. Eat it to restore half a heart.",
     "price": 3,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hylian_Shroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/1/13/BotW_Hylian_Shroom_Icon.png"
   },
   {
     "name": "Endura Shroom",
     "description": "A rare mushroom that temporarily extends your stamina wheel when cooked into a dish.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Endura_Shroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/29/BotW_Endura_Shroom_Icon.png"
   },
   {
     "name": "Stamella Shroom",
     "description": "A green mushroom that grows near trees in the forest. Cook it to create dishes that restore stamina.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Stamella_Shroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c2/BotW_Stamella_Shroom_Icon.png"
   },
   {
     "name": "Hearty Truffle",
     "description": "A rare mushroom that smells absolutely delicious. Cook it to unlock its life-giving potential.",
     "price": 6,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hearty_Truffle_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/cc/BotW_Hearty_Truffle_Icon.png"
   },
   {
     "name": "Big Hearty Truffle",
     "description": "A very rare mushroom prized for its rich aroma. Dishes cooked with it will temporarily increase your maximum hearts.",
     "price": 15,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Big_Hearty_Truffle_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/69/BotW_Big_Hearty_Truffle_Icon.png"
   },
   {
     "name": "Chillshroom",
     "description": "A mushroom that grows in frigid climates. Cook it into a dish for a heat-resistance effect.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Chillshroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/26/BotW_Chillshroom_Icon.png"
   },
   {
     "name": "Sunshroom",
     "description": "A mushroom that thrives in hot regions. Cook it into a dish for a cold-resistance effect.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Sunshroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/5d/BotW_Sunshroom_Icon.png"
   },
   {
     "name": "Zapshroom",
     "description": "A mushroom that grows in dry climates. Cook it into a dish for a shock-resistance effect.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Zapshroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6c/BotW_Zapshroom_Icon.png"
   },
   {
     "name": "Rushroom",
     "description": "A mushroom that grows on cliff faces. Cooking it into a dish will increase your movement speed.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Rushroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/55/BotW_Rushroom_Icon.png"
   },
   {
     "name": "Razorshroom",
     "description": "A mushroom with a cap as sharp as a blade. Cooking it into a dish will raise your attack power.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Razorshroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/62/BotW_Razorshroom_Icon.png"
   },
   {
     "name": "Ironshroom",
     "description": "A firm mushroom with an iron-like texture. Cooking it into a dish will fortify your defense.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Ironshroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/8/80/BotW_Ironshroom_Icon.png"
   },
   {
     "name": "Silent Shroom",
     "description": "A pale mushroom that glows softly at night. Cooking it into a dish will make your movements quieter.",
     "price": 5,
     "category": "Mushroom",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Silent_Shroom_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/36/BotW_Silent_Shroom_Icon.png"
   },
   {
     "name": "Hearty Radish",
     "description": "A rare radish packed with nutrients. Dishes cooked with it will temporarily increase your maximum hearts.",
     "price": 8,
     "category": "Vegetable",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hearty_Radish_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/3e/BotW_Hearty_Radish_Icon.png"
   },
   {
     "name": "Big Hearty Radish",
     "description": "An extra-large radish overflowing with vitality. Cooking it greatly increases your maximum hearts.",
     "price": 15,
     "category": "Vegetable",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Big_Hearty_Radish_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/3a/BotW_Big_Hearty_Radish_Icon.png"
   },
   {
     "name": "Swift Carrot",
     "description": "A crisp carrot grown in Kakariko Village. Cooking it into a dish will increase your movement speed.",
     "price": 5,
     "category": "Vegetable",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Swift_Carrot_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/32/BotW_Swift_Carrot_Icon.png"
   },
   {
     "name": "Endura Carrot",
     "description": "A rare carrot brimming with energy. Cooking it into a dish will temporarily extend your stamina wheel.",
     "price": 30,
     "category": "Vegetable",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Endura_Carrot_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/09/BotW_Endura_Carrot_Icon.png"
   },
   {
     "name": "Fortified Pumpkin",
     "description": "A hardy pumpkin grown in Kakariko Village. Cooking it into a dish will fortify your defense.",
     "price": 5,
     "category": "Vegetable",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Fortified_Pumpkin_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/ec/BotW_Fortified_Pumpkin_Icon.png"
   },
   {
     "name": "Raw Meat",
     "description": "Meat from animals living in the mountains. It can be cooked into a variety of hearty dishes.",
     "price": 8,
     "category": "Red Meat",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Raw_Meat_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/52/BotW_Raw_Meat_Icon.png"
   },
   {
     "name": "Raw Prime Meat",
     "description": "High-quality meat from animals in the wild. Cook it for an even more delicious dish.",
     "price": 15,
     "category": "Red Meat",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Raw_Prime_Meat_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c3/BotW_Raw_Prime_Meat_Icon.png"
   },
   {
     "name": "Raw Gourmet Meat",
     "description": "Meat of the highest quality, from the rarest of beasts. Cooking it brings out its full flavor.",
     "price": 35,
     "category": "Red Meat",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Raw_Gourmet_Meat_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6f/BotW_Raw_Gourmet_Meat_Icon.png"
   },
   {
     "name": "Raw Bird Drumstick",
     "description": "Meat from wild birds that roost across Hyrule. Cook it for a juicy and nourishing dish.",
     "price": 8,
     "category": "Poultry",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Raw_Bird_Drumstick_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c5/BotW_Raw_Bird_Drumstick_Icon.png"
   },
   {
     "name": "Raw Bird Thigh",
     "description": "High-quality poultry from wild birds. Cook it for a tender, flavorful meal.",
     "price": 15,
     "category": "Poultry",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Raw_Bird_Thigh_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/77/BotW_Raw_Bird_Thigh_Icon.png"
   },
   {
     "name": "Raw Whole Bird",
     "description": "Top-quality poultry from the rarest of birds. Cooking it whole makes for an extravagant feast.",
     "price": 35,
     "category": "Poultry",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Raw_Whole_Bird_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/05/BotW_Raw_Whole_Bird_Icon.png"
   },
   {
     "name": "Ironshell Crab",
     "description": "A crab with a shell as hard as iron. Cooking it into a dish will fortify your defense.",
     "price": 8,
     "category": "Crab",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Ironshell_Crab_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/1/1c/BotW_Ironshell_Crab_Icon.png"
   },
   {
     "name": "Razorclaw Crab",
     "description": "A crab with claws sharp as razors. Cooking it into a dish will raise your attack power.",
     "price": 8,
     "category": "Crab",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Razorclaw_Crab_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/56/BotW_Razorclaw_Crab_Icon.png"
   },
   {
     "name": "Bright-Eyed Crab",
     "description": "A lively crab found near rivers and cliffs. Cooking it into a dish will restore stamina.",
     "price": 8,
     "category": "Crab",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Bright-Eyed_Crab_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/d/db/BotW_Bright-Eyed_Crab_Icon.png"
   },
   {
     "name": "Hyrule Bass",
     "description": "A common fish found all over Hyrule. It can be cooked into a variety of dishes.",
     "price": 6,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hyrule_Bass_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/66/BotW_Hyrule_Bass_Icon.png"
   },
   {
     "name": "Hearty Bass",
     "description": "A rare bass brimming with energy. Dishes cooked with it will restore extra hearts.",
     "price": 18,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hearty_Bass_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/0c/BotW_Hearty_Bass_Icon.png"
   },
   {
     "name": "Staminoka Bass",
     "description": "A fish with well-developed muscles. Cooking it creates dishes that restore stamina.",
     "price": 18,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Staminoka_Bass_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/79/BotW_Staminoka_Bass_Icon.png"
   },
   {
     "name": "Hearty Salmon",
     "description": "A premium fish that lives in cold waters. Cooking it will temporarily increase your maximum hearts.",
     "price": 10,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hearty_Salmon_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/8/81/BotW_Hearty_Salmon_Icon.png"
   },
   {
     "name": "Chillfin Trout",
     "description": "A trout that lives in frigid waters. Cooking it into a dish grants a heat-resistance effect.",
     "price": 6,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Chillfin_Trout_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/1/15/BotW_Chillfin_Trout_Icon.png"
   },
   {
     "name": "Sizzlefin Trout",
     "description": "A trout that lives near volcanic waters. Cooking it into a dish grants a cold-resistance effect.",
     "price": 6,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Sizzlefin_Trout_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/69/BotW_Sizzlefin_Trout_Icon.png"
   },
   {
     "name": "Voltfin Trout",
     "description": "A trout with fins that carry an electric charge. Cooking it grants a shock-resistance effect.",
     "price": 6,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Voltfin_Trout_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/1/1b/BotW_Voltfin_Trout_Icon.png"
   },
   {
     "name": "Stealthfin Trout",
     "description": "A mysterious trout that glows faintly at night. Cooking it will make your movements quieter.",
     "price": 10,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Stealthfin_Trout_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/d/d6/BotW_Stealthfin_Trout_Icon.png"
   },
   {
     "name": "Armored Carp",
     "description": "A carp covered in sturdy scales. Cooking it into a dish will fortify your defense.",
     "price": 8,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Armored_Carp_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/8/86/BotW_Armored_Carp_Icon.png"
   },
   {
     "name": "Mighty Carp",
     "description": "A strong carp that swims against rushing currents. Cooking it will raise your attack power.",
     "price": 8,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Mighty_Carp_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/c/c8/BotW_Mighty_Carp_Icon.png"
   },
   {
     "name": "Sanke Carp",
     "description": "A beautiful ornamental carp found in the ponds of Kakariko Village. It's a rather high-class ingredient.",
     "price": 20,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Sanke_Carp_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/9/9c/BotW_Sanke_Carp_Icon.png"
   },
   {
     "name": "Armored Porgy",
     "description": "An ocean fish covered in hard scales. Cooking it into a dish will fortify your defense.",
     "price": 8,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Armored_Porgy_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/60/BotW_Armored_Porgy_Icon.png"
   },
   {
     "name": "Mighty Porgy",
     "description": "An ocean fish with powerful muscles. Cooking it into a dish will raise your attack power.",
     "price": 8,
     "category": "Fish",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Mighty_Porgy_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/72/BotW_Mighty_Porgy_Icon.png"
   },
   {
     "name": "Hearty Blueshell Snail",
     "description": "A rare snail that lives near the ocean. Dishes cooked with it will restore extra hearts.",
     "price": 15,
     "category": "Snail",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hearty_Blueshell_Snail_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/66/BotW_Hearty_Blueshell_Snail_Icon.png"
   },
   {
     "name": "Sneaky River Snail",
     "description": "A snail that lives in rivers. Cooking it into a dish will make your movements quieter.",
     "price": 6,
     "category": "Snail",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Sneaky_River_Snail_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/8/82/BotW_Sneaky_River_Snail_Icon.png"
   },
   {
     "name": "Acorn",
     "description": "A nut often buried by forest critters. Cook it to add a nutty flavor to any dish.",
     "price": 2,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Acorn_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/66/BotW_Acorn_Icon.png"
   },
   {
     "name": "Chickaloo Tree Nut",
     "description": "A nut from a tree commonly found in forests. It has a rich flavor when cooked.",
     "price": 2,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Chickaloo_Tree_Nut_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/04/BotW_Chickaloo_Tree_Nut_Icon.png"
   },
   {
     "name": "Bird Egg",
     "description": "An egg from a wild bird's nest. It's an essential ingredient in many cooked dishes.",
     "price": 3,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Bird_Egg_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/75/BotW_Bird_Egg_Icon.png"
   },
   {
     "name": "Courser Bee Honey",
     "description": "Honey from a courser bee hive. It's sweet, nutritious, and restores stamina when cooked.",
     "price": 10,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Courser_Bee_Honey_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/f/fd/BotW_Courser_Bee_Honey_Icon.png"
   },
   {
     "name": "Hylian Rice",
     "description": "Rice grown in the wetlands of Hyrule. It's a staple ingredient in many meals.",
     "price": 12,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hylian_Rice_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/67/BotW_Hylian_Rice_Icon.png"
   },
   {
     "name": "Tabantha Wheat",
     "description": "Wheat grown in the Tabantha region. Grind it into flour for breads and pastries.",
     "price": 12,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Tabantha_Wheat_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/a/a3/BotW_Tabantha_Wheat_Icon.png"
   },
   {
     "name": "Cane Sugar",
     "description": "Sugar made from sweet cane. It's an essential ingredient for desserts.",
     "price": 12,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Cane_Sugar_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b5/BotW_Cane_Sugar_Icon.png"
   },
   {
     "name": "Goat Butter",
     "description": "Butter made from the milk of Hateno goats. It's used in a variety of dishes and desserts.",
     "price": 12,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Goat_Butter_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/76/BotW_Goat_Butter_Icon.png"
   },
   {
     "name": "Goron Spice",
     "description": "A blend of spices brought from Goron City. It adds a rich flavor and aroma to any dish.",
     "price": 16,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Goron_Spice_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6f/BotW_Goron_Spice_Icon.png"
   },
   {
     "name": "Rock Salt",
     "description": "Crystallized salt from the ancient sea. It can be ground up and used to season dishes.",
     "price": 12,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Rock_Salt_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/2/21/BotW_Rock_Salt_Icon.png"
   },
   {
     "name": "Fresh Milk",
     "description": "Fresh milk from Hateno cows. It's used in soups, stews, and desserts.",
     "price": 12,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Fresh_Milk_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6a/BotW_Fresh_Milk_Icon.png"
   },
   {
     "name": "Monster Extract",
     "description": "A mysterious extract made from monster parts. It's used in some very peculiar recipes.",
     "price": 9,
     "category": "Misc",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Monster_Extract_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/a/a3/BotW_Monster_Extract_Icon.png"
   },
   {
     "name": "Hyrule Herb",
     "description": "A common herb that grows all across Hyrule. It's used in a variety of cooked dishes.",
     "price": 3,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Hyrule_Herb_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/3/3d/BotW_Hyrule_Herb_Icon.png"
   },
   {
     "name": "Silent Princess",
     "description": "A rare flower said to have once grown near Hyrule Castle. Cooking it will make your movements quieter.",
     "price": 10,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Silent_Princess_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/4/48/BotW_Silent_Princess_Icon.png"
   },
   {
     "name": "Armoranth",
     "description": "A flowering plant with sturdy petals. Cooking it into a dish will fortify your defense.",
     "price": 5,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Armoranth_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/b3/BotW_Armoranth_Icon.png"
   },
   {
     "name": "Blue Nightshade",
     "description": "A plant that glows faintly at night. Cooking it into a dish will make your movements quieter.",
     "price": 4,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Blue_Nightshade_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/a/a5/BotW_Blue_Nightshade_Icon.png"
   },
   {
     "name": "Cool Safflina",
     "description": "A herb that grows in the desert at night. Cooking it into a dish grants a heat-resistance effect.",
     "price": 5,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Cool_Safflina_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/7d/BotW_Cool_Safflina_Icon.png"
   },
   {
     "name": "Warm Safflina",
     "description": "A herb that grows in warm, dry regions. Cooking it into a dish grants a cold-resistance effect.",
     "price": 5,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Warm_Safflina_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/ea/BotW_Warm_Safflina_Icon.png"
   },
   {
     "name": "Electric Safflina",
     "description": "A herb that grows in dry climates. Cooking it into a dish grants a shock-resistance effect.",
     "price": 5,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Electric_Safflina_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/4/42/BotW_Electric_Safflina_Icon.png"
   },
   {
     "name": "Mighty Thistle",
     "description": "A prickly plant that grows near cliffs. Cooking it into a dish will raise your attack power.",
     "price": 5,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Mighty_Thistle_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/7/76/BotW_Mighty_Thistle_Icon.png"
   },
   {
     "name": "Swift Violet",
     "description": "A flower that grows on cliff faces. Cooking it into a dish will increase your movement speed.",
     "price": 10,
     "category": "Herb",
-    "image": "https://zelda.fandom.com/wiki/Special:FilePath/BotW_Swift_Violet_Icon.png"
+    "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/e/e1/BotW_Swift_Violet_Icon.png"
   }
 ]
