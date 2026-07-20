@@ -1,0 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pixel-art game icons look better crisp than blurred when scaled up */
+img.game-icon {
+  image-rendering: -webkit-optimize-contrast;
+}
