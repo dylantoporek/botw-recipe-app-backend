@@ -13,6 +13,7 @@ Originally a Rails 7 + Heroku app, the backend is now a **Node/Express API that 
 - `db/data/*.json` — seed data (recipes, ingredients, stores)
 - `scripts/seed.js` — creates tables and seeds the reference data; safe to re-run
 - `public/` — production build of the React frontend, served statically with SPA fallback
+- `client/` — the React frontend source (Vite). Edit it, then `cd client && npm install && npm run build` to regenerate `public/`
 
 The old Rails app (`app/`, `config/`, `Gemfile`, …) is kept in the repo for reference but is no longer used; it can be deleted whenever you like.
 

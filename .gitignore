@@ -26,3 +26,4 @@
 /node_modules
 .env
 .vercel
+/client/node_modules
