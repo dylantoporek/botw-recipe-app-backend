@@ -57,6 +57,20 @@ function App() {
 
   }, []);
 
+  // Load the pantry as soon as we know who's logged in, so checkout can
+  // merge quantities into existing pantry rows instead of duplicating them.
+  useEffect(() => {
+    if (user) {
+      fetch('/api/v1/pantries').then((r) => {
+        if (r.ok) {
+          r.json().then((data) => setPantries(data))
+        }
+      })
+    } else {
+      setPantries([])
+    }
+  }, [user]);
+
 
   function changePage(str){
     setSelectedPage(str)
@@ -194,7 +208,8 @@ function App() {
         setPantries={setPantries}
         recipeList={recipeList}
         changePage={changePage}
-        pinnedRecipe={pinnedRecipe}/>
+        pinnedRecipe={pinnedRecipe}
+        changePinnedRecipe={changePinnedRecipe}/>
         ) : (
         <LoginPrompt authChecked={authChecked}/>
         )}/>

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Flex, Text, Image, IconButton } from "@chakra-ui/react";
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 
 function Pantry({ item, pot, addItemToPot, removeFromPot }) {
-  const [quantity, setQuantity] = useState(item.quantity);
+  // Quantity comes straight from the pantry data (kept in sync with the
+  // server by the Kitchen), so rows can't drift out of date.
+  const quantity = item.quantity;
 
   function addToPot() {
     if (quantity > 0 && pot.length < 5) {
       addItemToPot(item, quantity);
-      let newQuantity = quantity - 1;
-      setQuantity(newQuantity);
     }
     if (quantity === 0) {
       alert(`You are out of ${item.ingredient.name}. You can purchase more from the store.`);
@@ -24,8 +24,6 @@ function Pantry({ item, pot, addItemToPot, removeFromPot }) {
 
     if (potCheck !== undefined) {
       removeFromPot(item, quantity);
-      let newQuantity = quantity + 1;
-      setQuantity(newQuantity);
     } else {
       alert(`There is no ${item.ingredient.name} in the pot.`);
     }

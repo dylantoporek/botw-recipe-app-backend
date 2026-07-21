@@ -5,6 +5,7 @@ import Pot from "../Components/Pot";
 import KitchenNav from "../Components/KitchenNav";
 import PinnedRecipe from "../Components/PinnedRecipe";
 import { PageHeader } from "../Components/UI";
+import { playSuccessSound, playFailureSound } from "../sounds";
 
 
 function Kitchen({
@@ -15,6 +16,7 @@ function Kitchen({
      setUser,
      changePage,
      pinnedRecipe,
+     changePinnedRecipe,
      ingredientList,
      pot,
      setPot}){
@@ -59,11 +61,11 @@ function Kitchen({
                 }).then((r) => {
                 if (r.ok) {
                   r.json().then((data)=> {
-                      let found = pantries.find((ing)=> ing.ingredient.id === data.ingredient.id)
-                      let foundIndex = pantries.indexOf(found)
-                      let newPantry = pantries
-                      newPantry.splice(foundIndex, 1, data)
-                      setPantries(newPantry)
+                      // Replace the row immutably so React re-renders with
+                      // the server-confirmed quantity.
+                      setPantries((current) =>
+                        current.map((row) => (row.id === data.id ? data : row))
+                      )
                   })
                 } else {
                   r.json().catch((data) => console.log(data))
@@ -93,11 +95,9 @@ function Kitchen({
                 }).then((r) => {
                 if (r.ok) {
                   r.json().then((data)=> {
-                        let found = pantries.find((ing)=> ing.ingredient.id === data.ingredient.id)
-                        let foundIndex = pantries.indexOf(found)
-                        let newPantry = pantries
-                        newPantry.splice(foundIndex, 1, data)
-                        setPantries(newPantry)
+                        setPantries((current) =>
+                          current.map((row) => (row.id === data.id ? data : row))
+                        )
                   })
                 } else {
                   r.json().catch((data) => console.log(data))
@@ -105,6 +105,19 @@ function Kitchen({
               });
         let newPot = [...pot]
         setPot(newPot)
+    }
+
+    // Delete used-up pantry rows on the server, then refetch only after the
+    // deletes finish (refetching sooner would resurrect the rows), while
+    // hiding them locally right away.
+    function cleanUpEmptyPantryRows(){
+        const emptyRows = pantries.filter((pantryItem) => pantryItem.quantity === 0)
+        setPantries((current) => current.filter((pantryItem) => pantryItem.quantity > 0))
+        Promise.all(
+            emptyRows.map((pantryItem) =>
+                fetch(`/api/v1/pantries/${pantryItem.id}`, { method: 'DELETE' })
+            )
+        ).then(() => setRefetch((current) => !current))
     }
 
 
@@ -176,6 +189,7 @@ function Kitchen({
         })
         if (foundRecipe !== undefined){
             let targetedRecipe = recipeList.find((recipe)=> recipe.id === foundRecipe.id)
+            playSuccessSound()
             setDishSuccess(true)
             setDishMade(targetedRecipe)
             let dish = {
@@ -198,54 +212,21 @@ function Kitchen({
                   r.json().catch((data) => console.log(data))
                 }
               });
-              let newPantry = [...pantries]
-              newPantry.map((pantryItem)=>{
-                  if(pantryItem.quantity === 0){
-                    fetch(`/api/v1/pantries/${pantryItem.id}`, {
-                        method: 'DELETE',
-                      })
-                      .then((res) => {
-                        if (res.ok) {
-                          console.log("file deleted")
-                        } else {
-                          res.json().then((data)=> console.log(data))
-                        }
-                      })
-                  }
-                newPantry.filter((pantryItem) => pantryItem.quantity > 0)
-                setPantries(newPantry)
-              })
-            setRefetch(!refetch)
+            cleanUpEmptyPantryRows()
             setPot([])
             setTimeout(() => {
               setDishSuccess(false)
               setDishMade(null)
-            },1500)
+            }, 2500)
 
         } else {
+            playFailureSound()
             setDishFailure(true)
-            let newPantry = [...pantries]
-              newPantry.map((pantryItem)=>{
-                  if(pantryItem.quantity === 0){
-                    fetch(`/api/v1/pantries/${pantryItem.id}`, {
-                        method: 'DELETE',
-                      })
-                      .then((res) => {
-                        if (res.ok) {
-                          console.log("file deleted")
-                        } else {
-                          res.json().then((data)=> console.log(data))
-                        }
-                      })
-                  }
-                newPantry.filter((pantryItem) => pantryItem.quantity > 0)
-                setPantries(newPantry)
-            })
-            setRefetch(!refetch)
+            cleanUpEmptyPantryRows()
             setPot([])
             setTimeout(() => {
               setDishFailure(false)
-            }, 1500)
+            }, 2500)
         }
     }
 
@@ -331,7 +312,10 @@ function Kitchen({
                             </Button>
                         </Box>
 
-                        <PinnedRecipe pinnedRecipe={pinnedRecipe} ingredientList={ingredientList}/>
+                        <PinnedRecipe
+                         pinnedRecipe={pinnedRecipe}
+                         ingredientList={ingredientList}
+                         changePinnedRecipe={changePinnedRecipe}/>
                     </Grid>
                 </Box>
             </motion.div>
