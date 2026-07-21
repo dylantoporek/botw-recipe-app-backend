@@ -6,13 +6,15 @@ import Cookbook from '../Pages/Cookbook';
 import Kitchen from '../Pages/Kitchen';
 import '../App.css';
 import Login from './Login';
+import LoginPrompt from './LoginPrompt';
 import Cart from '../Pages/Cart';
 import Home from '../Pages/Home';
-import { ChakraProvider, Flex, useMediaQuery } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../theme'
 
 function App() {
   const [user, setUser] = useState(null);
+  const [authChecked, setAuthChecked] = useState(false);
   const [recipeList, setRecipeList] = useState([])
   const [ingredientList, setIngredientList] = useState([])
   const [cart, setCart] = useState([])
@@ -20,15 +22,17 @@ function App() {
   const [pantries, setPantries] = useState([])
   const [selectedPage, setSelectedPage] = useState(null)
   const [pinnedRecipe, setPinnedRecipe] = useState(null)
-  const [pinnedIngredients, setPinnedIngredients] = useState(null)
-  const [dishSold, setDishSold] = useState(false)
 
   useEffect(() => {
     // auto-login
     fetch("/api/v1/me").then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user));
+        r.json().then((user) => {
+          setUser(user)
+          setAuthChecked(true)
+        });
       } else{
+        setAuthChecked(true)
         r.json().then((data) => console.log(data))
       }
     });
@@ -50,7 +54,7 @@ function App() {
         r.json().then((data) => console.log(data))
       }
     })
-    
+
   }, []);
 
 
@@ -62,14 +66,9 @@ function App() {
     setPinnedRecipe(obj)
   }
 
-  
-  
-
 
   function checkPantryItems(item){
-    // console.log('pantry check ', item)
     let pantryCheck = pantries.filter((pantryItem)=> pantryItem.ingredient.id === item.id)
-    // console.log('pantry check' , pantryCheck)
     if (pantryCheck.length === 0){
 
       let pantry = {
@@ -95,7 +94,7 @@ function App() {
     } if (pantryCheck.length === 1){
 
      let quantityUpdate = parseInt(pantryCheck[0].quantity) + parseInt(item.quantity)
-     
+
      fetch(`/api/v1/pantries/${pantryCheck[0].id}`, {
       method: "PATCH",
       headers: {
@@ -152,62 +151,57 @@ function App() {
   }
 
 
-
-  if (!user){
-
-    return(
-      <ChakraProvider theme={theme}>
-        <Login onLogin={setUser} user={user} />
-      </ChakraProvider>
-    )
-  } else {
-    return (
-      <ChakraProvider theme={theme}>
-          <Navbar cart={cart} user={user} setUser={setUser} selectedPage={selectedPage}/>
-          <Routes>
-            <Route path='/shop' 
-             element={
-             <Store 
-              ingredientList={ingredientList} 
-              addItemToCart={addItemToCart} 
-              changePage={changePage}/>
-              }/>
-            <Route path='/recipes' 
-            element={
-            <Cookbook 
-             ingredientList={ingredientList} 
-             recipeList={recipeList} 
-             changePage={changePage} 
-             changePinnedRecipe={changePinnedRecipe}/>
-             }/>
-            <Route path='/cart' 
-            element={
-            <Cart 
-            user={user} 
-            cart={cart} 
-            setUser={setUser} 
-            setCart={setCart} 
-            deleteItemFromCart={deleteItemFromCart} 
-            checkPantryItems={checkPantryItems} 
-            changePage={changePage}/>}/>
-            <Route path='/kitchen' 
-            element={
-            <Kitchen
-            pot={pot}
-            setPot={setPot}
-            ingredientList={ingredientList}
-            user={user} 
-            setUser={setUser} 
-            pantries={pantries} 
-            setPantries={setPantries} 
-            recipeList={recipeList} 
-            changePage={changePage} 
-            pinnedRecipe={pinnedRecipe}/>}/>
-            <Route path='/'element={<Home recipeList={recipeList} ingredientList={ingredientList} changePage={changePage}/>}/>
-          </Routes>
-      </ChakraProvider>
-    );
-  }
+  return (
+    <ChakraProvider theme={theme}>
+      <Navbar cart={cart} user={user} setUser={setUser} selectedPage={selectedPage}/>
+      <Routes>
+        <Route path='/shop'
+         element={
+         <Store
+          ingredientList={ingredientList}
+          addItemToCart={addItemToCart}
+          changePage={changePage}/>
+          }/>
+        <Route path='/recipes'
+        element={
+        <Cookbook
+         ingredientList={ingredientList}
+         recipeList={recipeList}
+         changePage={changePage}
+         changePinnedRecipe={changePinnedRecipe}/>
+         }/>
+        <Route path='/cart'
+        element={
+        <Cart
+        user={user}
+        cart={cart}
+        setUser={setUser}
+        setCart={setCart}
+        deleteItemFromCart={deleteItemFromCart}
+        checkPantryItems={checkPantryItems}
+        changePage={changePage}/>}/>
+        <Route path='/login' element={<Login user={user} onLogin={setUser}/>}/>
+        <Route path='/kitchen'
+        element={
+        user ? (
+        <Kitchen
+        pot={pot}
+        setPot={setPot}
+        ingredientList={ingredientList}
+        user={user}
+        setUser={setUser}
+        pantries={pantries}
+        setPantries={setPantries}
+        recipeList={recipeList}
+        changePage={changePage}
+        pinnedRecipe={pinnedRecipe}/>
+        ) : (
+        <LoginPrompt authChecked={authChecked}/>
+        )}/>
+        <Route path='/'element={<Home recipeList={recipeList} ingredientList={ingredientList} changePage={changePage}/>}/>
+      </Routes>
+    </ChakraProvider>
+  );
 }
 
 export default App;

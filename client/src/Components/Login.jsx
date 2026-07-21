@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import { Box, Flex, Text, Heading, Image } from "@chakra-ui/react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-function Login({ onLogin }) {
+function Login({ user, onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from || "/";
+
+  // Once logged in (including arriving here while already logged in),
+  // return to wherever the visitor was headed.
+  useEffect(() => {
+    if (user) navigate(from, { replace: true });
+  }, [user]);
 
   return (
     <Flex minH="100vh" bg="paper.100" alignItems="center" justifyContent="center" px={4}>
@@ -15,7 +25,11 @@ function Login({ onLogin }) {
             BOTW Kitchen
           </Heading>
           <Text mt={2} color="ink.500" fontSize="sm" textAlign="center">
-            Recipes, ingredients, and your own kitchen — cook your way through Hyrule.
+            {from === "/kitchen"
+              ? "Log in to use your kitchen."
+              : from === "/cart"
+              ? "Log in to complete your purchase."
+              : "Recipes, ingredients, and your own kitchen — cook your way through Hyrule."}
           </Text>
         </Flex>
 
@@ -47,6 +61,19 @@ function Login({ onLogin }) {
             {showLogin ? "Sign up" : "Log in"}
           </Text>
         </Flex>
+
+        <Text
+          as="button"
+          display="block"
+          mx="auto"
+          mt={4}
+          fontSize="sm"
+          color="ink.500"
+          _hover={{ color: "ink.900", textDecoration: "underline" }}
+          onClick={() => navigate("/")}
+        >
+          ← Continue browsing without an account
+        </Text>
       </Box>
     </Flex>
   );

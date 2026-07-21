@@ -31,6 +31,10 @@ function Cart({ user, cart, deleteItemFromCart, checkPantryItems, setCart, setUs
   });
 
   function checkoutItems() {
+    if (!user) {
+      navigate("/login", { state: { from: "/cart" } });
+      return;
+    }
     if (user.bank > tallyTotal) {
       const newBankStatement = user.bank - tallyTotal;
       fetch(`/api/v1/users/${user.id}`, {
@@ -162,14 +166,20 @@ function Cart({ user, cart, deleteItemFromCart, checkPantryItems, setCart, setUs
                   </Text>
                   <RupeePrice value={tallyTotal} />
                 </Flex>
-                <Flex justifyContent="space-between" alignItems="center" mb={5}>
-                  <Text color="ink.500" fontSize="sm">
-                    Your rupees
+                {user ? (
+                  <Flex justifyContent="space-between" alignItems="center" mb={5}>
+                    <Text color="ink.500" fontSize="sm">
+                      Your rupees
+                    </Text>
+                    <RupeePrice value={user.bank} />
+                  </Flex>
+                ) : (
+                  <Text color="ink.500" fontSize="sm" mb={5}>
+                    You'll need to log in to complete your purchase.
                   </Text>
-                  <RupeePrice value={user.bank} />
-                </Flex>
+                )}
                 <Button variant="accent" w="100%" onClick={() => checkoutItems()}>
-                  Checkout
+                  {user ? "Checkout" : "Log in to checkout"}
                 </Button>
               </Box>
             </Flex>
