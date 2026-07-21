@@ -14,6 +14,7 @@ import {
   MenuItem,
   MenuDivider,
   IconButton,
+  Button,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import AccountSettings from "./AccountSettings";
@@ -53,7 +54,32 @@ function Navbar({ user, setUser, selectedPage, cart }) {
     </Flex>
   );
 
-  const bankAndCart = (
+  const cartIcon = (
+    <Box position="relative" cursor="pointer" onClick={() => go("/cart")} title="Cart">
+      <Image maxW="22px" src="/cart.svg" alt="Cart" />
+      {cart.length > 0 ? (
+        <Flex
+          position="absolute"
+          top="-6px"
+          right="-8px"
+          bg="accent.500"
+          color="white"
+          borderRadius="full"
+          minW="16px"
+          h="16px"
+          fontSize="10px"
+          fontWeight={700}
+          alignItems="center"
+          justifyContent="center"
+          px={1}
+        >
+          {cart.length}
+        </Flex>
+      ) : null}
+    </Box>
+  );
+
+  const bankAndCart = user ? (
     <Flex alignItems="center" gap={{ base: 4, md: 6 }}>
       <Flex alignItems="center" gap={1.5} title="Your rupees">
         <Image maxH="18px" src={rupee} alt="rupees" />
@@ -61,33 +87,7 @@ function Navbar({ user, setUser, selectedPage, cart }) {
           {user.bank}
         </Text>
       </Flex>
-      <Box
-        position="relative"
-        cursor="pointer"
-        onClick={() => go("/cart")}
-        title="Cart"
-      >
-        <Image maxW="22px" src="/cart.svg" alt="Cart" />
-        {cart.length > 0 ? (
-          <Flex
-            position="absolute"
-            top="-6px"
-            right="-8px"
-            bg="accent.500"
-            color="white"
-            borderRadius="full"
-            minW="16px"
-            h="16px"
-            fontSize="10px"
-            fontWeight={700}
-            alignItems="center"
-            justifyContent="center"
-            px={1}
-          >
-            {cart.length}
-          </Flex>
-        ) : null}
-      </Box>
+      {cartIcon}
       <Menu placement="bottom-end">
         <MenuButton>
           <Image cursor="pointer" src="/account_circle.svg" alt="Account" />
@@ -103,6 +103,13 @@ function Navbar({ user, setUser, selectedPage, cart }) {
           <AccountSettings user={user} setUser={setUser} as="menu-item" />
         </MenuList>
       </Menu>
+    </Flex>
+  ) : (
+    <Flex alignItems="center" gap={{ base: 3, md: 5 }}>
+      {cartIcon}
+      <Button size="sm" variant="accent" onClick={() => go("/login")}>
+        Log in
+      </Button>
     </Flex>
   );
 
