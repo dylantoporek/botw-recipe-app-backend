@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Box, Flex, Text, Button, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, Heading, Image, IconButton } from "@chakra-ui/react";
+import { CloseIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import { Eyebrow } from "./UI";
 
-export default function PinnedRecipe({ pinnedRecipe, ingredientList }) {
+export default function PinnedRecipe({ pinnedRecipe, ingredientList, changePinnedRecipe }) {
   const [recipeIngredients, setRecipeIngredients] = useState([]);
   const navigate = useNavigate();
 
@@ -17,12 +18,27 @@ export default function PinnedRecipe({ pinnedRecipe, ingredientList }) {
       let item5 = ingredientList.find((ing) => ing.name !== null && ing.name === pinnedRecipe.ingredient5);
       ingredients.push(item1, item2, item3, item4, item5);
       setRecipeIngredients([...ingredients]);
+    } else {
+      setRecipeIngredients([]);
     }
-  }, []);
+  }, [pinnedRecipe]);
 
   return (
     <Box bg="white" border="1px solid" borderColor="paper.300" borderRadius="xl" p={5}>
-      <Eyebrow mb={2}>Pinned recipe</Eyebrow>
+      <Flex alignItems="center" justifyContent="space-between" mb={2}>
+        <Eyebrow>Pinned recipe</Eyebrow>
+        {pinnedRecipe && changePinnedRecipe ? (
+          <IconButton
+            aria-label="Unpin recipe"
+            title="Unpin recipe"
+            size="xs"
+            variant="quiet"
+            borderRadius="full"
+            onClick={() => changePinnedRecipe(null)}
+            icon={<CloseIcon boxSize={2} />}
+          />
+        ) : null}
+      </Flex>
       {recipeIngredients.length > 0 && pinnedRecipe ? (
         <Box>
           <Heading fontSize="lg" fontWeight={600} mb={3}>
